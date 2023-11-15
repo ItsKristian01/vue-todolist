@@ -25,43 +25,46 @@
     <div id="app">
       <section class="vh-100" style="background-color: #3dc38b">
         <div class="container py-5 h-100">
-          <div
-            class="row d-flex justify-content-center align-items-center h-100"
-          >
+          <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col col-lg-8 col-xl-6">
               <div class="card rounded-3">
                 <div class="card-body p-4">
+
+                  <!-- Card Title -->
                   <p class="mb-2">
                     <span class="h2 me-2">TO DO LIST</span>
                     <span class="badge bg-danger ms-2">To Do List</span>
                   </p>
 
+
+                  <!-- Tasks List -->
                   <ul class="list-group rounded-0">
                     <li
                       class="list-group-item border-0 d-flex align-items-center ps-0"
-                      v-for="item in items">
+                      v-for="(item, index) in items">
 
                       <!-- Checkbox -->
                       <input
                         class="form-check-input me-3"
                         type="checkbox"
                         value=""
-                        aria-label="..."
-                        checked/>
+                         />
 
                         <!-- Dynamically added items -->
-                      <h5>{{item}}</h5>
-                      
+                      <h5>{{item.item}}</h5>
+
                       <!-- Cross icon -->
                       <span>
                         <i
-                          class="fa-regular fa-circle-xmark ms-3"
+                          class="fa-regular fa-circle-xmark ms-3 cross"
                           style="color: #fe0101"
+                          @click="removeElement"
                         ></i>
                       </span>
                     </li>
                   </ul>
 
+                  <!-- Input -->
                   <div class="input-group flex-nowrap mt-3">
                     <input
                       type="text"
@@ -72,9 +75,9 @@
                     />
                   </div>
 
-                  <button type="button" class="btn btn-dark mt-3">
-                    Add an item
-                  </button>
+                  <!-- Adding item button -->
+                  <button type="button" class="btn btn-dark mt-3">Add an item</button>
+
                 </div>
               </div>
             </div>
