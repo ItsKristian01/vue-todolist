@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue To Do List</title>
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <!-- Vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        
+        <section class="vh-100" style="background-color: #3dc38b;">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-8 col-xl-6">
+                  <div class="card rounded-3">
+                    <div class="card-body p-4">
+          
+                      <p class="mb-2"><span class="h2 me-2">TO DO LIST</span> <span
+                          class="badge bg-danger">To Do List</span></p>
+          
+                      <ul class="list-group rounded-0">
+                        <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." checked />
+                          <span>Task list and assignments 
+                            <i class="fa-regular fa-circle-xmark ms-2" style="color: #fe0101;"></i>
+                        </span>
+                        </li>
+                        <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                          <span>Set due date and assignments
+                            <i class="fa-regular fa-circle-xmark ms-2" style="color: #fe0101;"></i>
+                          </span>
+                        </li>
+                        <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                          <span>Remove duplicate tasks and stories
+                            <i class="fa-regular fa-circle-xmark ms-2" style="color: #fe0101;"></i>
+                          </span>
+                        </li>
+                        <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                          <span>Update the userflow and stories
+                            <i class="fa-regular fa-circle-xmark ms-2" style="color: #fe0101;"></i>
+                          </span>
+                        </li>
+                        <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                          <input class="form-check-input me-3" type="checkbox" value="" aria-label="..." />
+                          <span>Adjust the components 
+                            <i class="fa-regular fa-circle-xmark ms-2" style="color: #fe0101;"></i>
+                          </span>
+                        </li>
+                      </ul>
+
+                      <div class="input-group flex-nowrap mt-3">
+                        <input type="text" class="form-control" placeholder="Write an item to add" aria-label="Write an item to add" aria-describedby="addon-wrapping">
+                      </div>
+
+                      <button type="button" class="btn btn-dark mt-3">Add an item</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
     </div>
     <!-- Script -->
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
