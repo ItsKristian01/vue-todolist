@@ -20,11 +20,17 @@ createApp({
             item: "Adjust the components",
         },
       ],
+      newItems: [],
      };
     },
   methods: {
     removeElement: function (index) {
         this.items.splice(index, 1);
-      }
+      },
+    
+    addItem: function() {
+      this.newItems.push({...this.items.item})
+      this.items.item = "";
+    }
   }
 }).mount("#app");
