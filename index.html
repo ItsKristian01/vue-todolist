@@ -25,32 +25,27 @@
     <div id="app">
       <section class="vh-100" style="background-color: #3dc38b">
         <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
             <div class="col col-lg-8 col-xl-6">
               <div class="card rounded-3">
                 <div class="card-body p-4">
-
                   <!-- Card Title -->
-                  <p class="mb-2">
+                  <p class="mb-4">
                     <span class="h2 me-2">TO DO LIST</span>
                     <span class="badge bg-danger ms-2">To Do List</span>
                   </p>
 
-
                   <!-- Tasks List -->
-                  <ul class="list-group rounded-0">
+                  <ul class="list-group rounded-0" v-if="items.length > 0">
                     <li
-                      class="list-group-item border-0 d-flex align-items-center ps-0"
-                      v-for="(item, index) in items">
+                      class="list-group-item border-0 d-flex justify-content-between ps-0"
+                      v-for="(item, index) in items"
+                    >
+    
 
-                      <!-- Checkbox -->
-                      <input
-                        class="form-check-input me-3"
-                        type="checkbox"
-                        value=""
-                         />
-
-                        <!-- Dynamically added items -->
+                      <!-- Dynamically added items -->
                       <h5>{{item.item}}</h5>
 
                       <!-- Cross icon -->
@@ -64,6 +59,10 @@
                     </li>
                   </ul>
 
+                  <div class="alert" v-else>
+                    Non c'e' nulla nella lista 
+                  </div>
+
                   <!-- Input -->
                   <div class="input-group flex-nowrap mt-3">
                     <input
@@ -76,7 +75,13 @@
                   </div>
 
                   <!-- Adding item button -->
-                  <button @click="addItem" type="button" class="btn btn-dark mt-3">Add an item</button>
+                  <button
+                    @click="addItem"
+                    type="button"
+                    class="btn btn-dark mt-3"
+                  >
+                    Add an item
+                  </button>
 
                 </div>
               </div>

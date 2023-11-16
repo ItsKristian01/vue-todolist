@@ -17,7 +17,7 @@ createApp({
           item: "Update the userflow and stories",
         },
         {
-            item: "Adjust the components",
+          item: "Adjust the components",
         },
       ],
       newItems: [],
@@ -30,7 +30,7 @@ createApp({
     
     addItem: function() {
       this.newItems.push({...this.items.item})
-      this.items.item = "";
+      this.newItems = "";
     }
   }
 }).mount("#app");
